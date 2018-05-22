@@ -27,5 +27,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
         registry.setApplicationDestinationPrefixes("/app");
         //this is an in memory message broker we will be using rabitmq
         registry.enableSimpleBroker("/topic");
+
+        registry.enableSimpleBroker("/chat", "/privateRoom");
     }
 }
